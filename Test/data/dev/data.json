@@ -1,0 +1,9 @@
+
+{
+    "TC1":
+    {
+        "username":"name",
+        "password":"password",
+        "someString":"String"
+    }
+}
