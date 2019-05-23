@@ -1,4 +1,7 @@
 import { ElementFinder,element,by, browser } from "protractor";
+import { genericUtility } from "../genericUtility/genericUtility";
+
+let genericUtilityObject = new genericUtility();
 
 export class loginPage{
 
@@ -15,26 +18,24 @@ export class loginPage{
         };
 
         navigateTo = async function(url) {
-            await browser.get(url);
-            browser.logger.info("Navigated to - "+ url);
-            
+            await genericUtilityObject.getAppURL(url);
           };
 
-        enterUserName = async function (userName) {
+        enterUserName = async function (uname) {
         
-             await this.username.clear();
-             await this.username.sendKeys(userName);
-             browser.logger.info("Entered username - "+userName);
+             await genericUtilityObject.clearText(this.username);
+             await genericUtilityObject.sendTextInTextBox(this.username, uname);
+             browser.logger.info("Entered username - "+uname);
         };
 
-        enterPassword = async function(password){
-            await this.password.clear();
-            await this.password.sendKeys(password);
-            browser.logger.info("Entered password - "+password);
+        enterPassword = async function(pwd){
+            await genericUtilityObject.clearText(this.password);
+            await genericUtilityObject.sendTextInTextBox(this.password, pwd);
+            browser.logger.info("Entered password - "+pwd);
        };
        
        clickOnSubmitButton = async function() {
-            await this.submitLogin.click();
+            await genericUtilityObject.clickElement(this.submitLogin);
             browser.logger.info("Clicked on submit button");
        };
 }
