@@ -6,7 +6,7 @@ import chai from "chai";
 let expect = chai.expect;
 let loginPageObject = new loginPage();
 
-Given('I login to GuestEnCor Application', async ()=> {
+Given('I login to Application', async ()=> {
     
       await loginPageObject.navigateTo(browser.params.url);
       await loginPageObject.enterUserName(browser.params.username);

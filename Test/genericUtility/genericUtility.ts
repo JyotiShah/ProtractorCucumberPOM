@@ -4,6 +4,11 @@ import {  Status } from 'cucumber';
 import { async } from "q";
 
 export class genericUtility{
+    //Get Application URL
+        getAppURL = async (url:string) =>{
+            browser.get(url);
+            browser.logger.info("Navigated to - "+ url);
+        }
     //Alert
         //switches to alert and accepts it
         acceptAlert = async()=>{
@@ -180,21 +185,5 @@ export class genericUtility{
     //Window Handles
 
 
-    //Capture ScreenShot
-        captureScreenShotOfPage = async function(scenario) {
-            if (scenario.result.status=== Status.FAILED || scenario.result.status=== Status.PASSED){
-            //code to take screesnhot
-            const screenshot= await browser.takeScreenshot();
-                this.attach(screenshot,"image/png");
-            } 
-            browser.logger.info("Screen Shot taken for - " + scenario);  
-        };
-
-        captureScreenShotOfElement = async function(element:ElementFinder) {
-            //code to take screesnhot
-            const screenshot= await element.takeScreenshot();
-                this.attach(screenshot,"image/png");
-                browser.logger.info("Screen Shot taken for - " + element.locator()); 
-        };
 
 }
