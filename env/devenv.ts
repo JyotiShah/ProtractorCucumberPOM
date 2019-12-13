@@ -81,7 +81,7 @@ export let dev: Config = {
           metadata: {
               "App Version":"Local",
               "Test Environment": "Dev",
-              "Browser": "Chrome  72",
+              "Browser": "Chrome  75",
               "Platform": "Windows 10",
               "Parallel": "Scenarios",
               "Executed": "Remote"

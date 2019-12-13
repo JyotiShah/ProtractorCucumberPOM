@@ -1,0 +1,94 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Test Login to Application",
+    "line": 2,
+    "id": "test-login-to-application",
+    "tags": [],
+    "uri": "Test\\features\\module1\\login.feature",
+    "elements": [
+      {
+        "id": "test-login-to-application;navigate-to-url",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Navigate to URL",
+        "tags": [
+          {
+            "name": "@check",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "Test\\hooks\\hooks.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I login to Application",
+            "match": {
+              "location": "Test\\steps\\loginPageSteps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should be able to go to HomePage",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I Navigate to URL",
+            "match": {
+              "location": "Test\\steps\\loginPageSteps.ts:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "Test\\hooks\\hooks.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -9,3 +9,4 @@ Feature: Test Login to Application
   Scenario:  Test Login- Logout functionality 
     When I click Logout button
     Then I should be able to log-out of Application
+  

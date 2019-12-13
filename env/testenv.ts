@@ -10,7 +10,7 @@ export let qa: Config = {
    
    params: {
   
-      url: 'testURL',
+      url: 'https://www.google.com',
       username: 'test',
       password: 'test',
       wait: 5000
@@ -41,7 +41,7 @@ export let qa: Config = {
     cucumberOpts: {
         // require step definitions
         compiler: "ts:ts-node/register",
-        tags:"@smoke" ,
+        tags:"@check" ,
         format:'json:./cucumberreport.json',
         require: [
           '../JavaScriptFiles/Test/steps/**/*.js', // accepts a glob,
@@ -82,7 +82,7 @@ export let qa: Config = {
           metadata: {
               "App Version":"SomeVersion",
               "Test Environment": "Test",
-              "Browser": "Chrome  72",
+              "Browser": "Chrome  75",
               "Platform": "Windows 10",
               "Parallel": "Scenarios",
               "Executed": "Remote"
