@@ -10,7 +10,7 @@ export let qa: Config = {
    
    params: {
   
-      url: 'https://www.google.com',
+      url: 'http://juliemr.github.io/protractor-demo/',
       username: 'test',
       password: 'test',
       wait: 5000
@@ -41,7 +41,7 @@ export let qa: Config = {
     cucumberOpts: {
         // require step definitions
         compiler: "ts:ts-node/register",
-        tags:"@check" ,
+        tags:"@calc" ,
         format:'json:./cucumberreport.json',
         require: [
           '../JavaScriptFiles/Test/steps/**/*.js', // accepts a glob,
@@ -67,7 +67,7 @@ export let qa: Config = {
         let userPath = new resources();
         browser.data = require(userPath.testDataFolder());
         browser.logger = log4js.getLogger('protractorLog4js');
-        // browser.env = env;
+        
         browser.manage().window().maximize();
         
       },

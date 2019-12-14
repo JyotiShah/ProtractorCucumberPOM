@@ -9,7 +9,7 @@ export let dev: Config = {
    // seleniumAddress: 'http://localhost:4444/wd/hub',
    
    params: {
-      url: 'yourURL',
+      url: 'http://juliemr.github.io/protractor-demo/',
       username: 'dev',
       password: 'dev',
       wait: 5000

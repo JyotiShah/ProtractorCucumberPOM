@@ -9,7 +9,7 @@
     "webdriver-update": "./node_modules/.bin/webdriver-manager update",
     "protractor": "./node_modules/protractor/built/cli.js",
     "test": "protractor JavaScriptFiles/conf.js"
-    },
+  },
   "author": "Jyoti Shah",
   "license": "ISC",
   "dependencies": {
