@@ -1,0 +1,5 @@
+/JavaScriptFiles*
+/log*
+/node_modules*
+/cucumber_report.html*
+/cucumberreport.json*
